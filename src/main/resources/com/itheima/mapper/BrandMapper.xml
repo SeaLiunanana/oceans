@@ -11,10 +11,10 @@
     <update id="updateByIds">
         update db_brand
         <set>
-            <if test="brandName!=null">brand_name=#{brandName},</if>
-            <if test="companyName!=null">company_name=#{companyName},</if>
+            <if test="brandName!=null and brandName!=''">brand_name=#{brandName},</if>
+            <if test="companyName!=null and companyName!=''">company_name=#{companyName},</if>
             <if test="ordered!=null">ordered=#{ordered},</if>
-            <if test="description!=null">description=#{description},</if>
+            <if test="description!=null and description!=''">description=#{description},</if>
             <if test="status!=null">status=#{status},</if>
         </set>
         where id=#{id}
