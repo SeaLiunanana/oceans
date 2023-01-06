@@ -82,7 +82,14 @@ public class BrandServiceImpl implements BrandService {
     }
 
     @Override
-    public void updateByIds(Brand brand) {
+    public void updateById(Brand brand) {
+
+            SqlSession sqlSession = sqlSessionFactory.openSession();
+            BrandMapper mapper = sqlSession.getMapper(BrandMapper.class);
+
+            mapper.updateById(brand);
+            sqlSession.commit();
+            sqlSession.close();
 
     }
 }

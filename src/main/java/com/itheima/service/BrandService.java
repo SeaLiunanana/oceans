@@ -11,5 +11,5 @@ public interface BrandService {
     PageBean<Brand> selectByPage(int currentPage, int pageSize);
     PageBean<Brand> selectByPageAndCondition(int currentPage, int pageSize, Brand brand);
 
-    void updateByIds(Brand brand);
+    void updateById(Brand brand);
 }

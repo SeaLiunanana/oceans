@@ -28,7 +28,7 @@ public interface BrandMapper {
 
     int selectCountByCondition(Brand brand);
 
-    int updateByIds(Brand brand);
+    int updateById(Brand brand);
 
 
 }
